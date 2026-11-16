@@ -17,7 +17,7 @@ When studying a complex structure, spontaneous questions may connect new knowled
 - Respond naturally rather than quiz after every turn or infer mastery from “I understand” alone.
 - At the end, provide a verified raw-log path or export and wait for the user to arrange review. If the original record is unavailable, say so rather than substitute a summary.
 
-The instructions are in English to reduce instruction-token overhead. Conversation and translation follow the user's current language or explicit preference, not the language of the skill file.
+Conversation and translation follow the user's current language or explicit preference, not the language of the skill file.
 
 ## Reviewing together
 
