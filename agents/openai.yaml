@@ -1,4 +1,4 @@
 interface:
-  display_name: "Study with AI"
+  display_name: "T-Learn"
   short_description: "Study primary material and review learning together"
   default_prompt: "Use $study-with-ai to study the current material with me in my language, translating the source when needed. Check my ideas, explore questions, and reconnect to the main thread; hand off the raw log when we finish and wait for a review request."

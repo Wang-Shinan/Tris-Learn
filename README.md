@@ -1,4 +1,6 @@
-# Study with AI
+# Tris-Learn (T-Learn)
+
+Tris-Learn, or **T-Learn**, is the project name. The skill identifier remains `study-with-ai`, so existing installation paths and `$study-with-ai` invocations continue to apply.
 
 An AI learning skill grounded in primary material, sustained questions, examination of the learner's explanations, and comparison of designs, with raw-log handoff and a companion session-review workflow.
 

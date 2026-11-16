@@ -1,6 +1,6 @@
 # Review a learning session together
 
-This is a companion workflow within study-with-ai. Read it when the user requests reflection on a learning session, supplies a log and asks for review, or explicitly begins a review in the current conversation. It works in the original study chat or another chat. A log alone does not request immediate review, and no new chat needs to be created automatically.
+This is a companion workflow within Tris-Learn (T-Learn), available as the study-with-ai skill. Read it when the user requests reflection on a learning session, supplies a log and asks for review, or explicitly begins a review in the current conversation. It works in the original study chat or another chat. A log alone does not request immediate review, and no new chat needs to be created automatically.
 
 **Offer a few grounded observations, invite the learner to interpret the experience with you, and develop conclusions gradually.**
 
