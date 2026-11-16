@@ -1,6 +1,6 @@
 # Tris-Learn (T-Learn)
 
-Tris-Learn, or **T-Learn**, is the project name. The skill identifier remains `study-with-ai`, so existing installation paths and `$study-with-ai` invocations continue to apply.
+Tris-Learn, or **T-Learn**, is the project name. Install it as `t-learn` and invoke it with `$t-learn`.
 
 An AI learning skill grounded in primary material, sustained questions, examination of the learner's explanations, and comparison of designs, with raw-log handoff and a companion session-review workflow.
 
@@ -36,19 +36,19 @@ Read the record, offer a few grounded observations and one useful question, then
 
 ## Using it in Codex
 
-Place the repository contents in `~/.codex/skills/study-with-ai/`, with `SKILL.md` directly inside that directory. With a custom `CODEX_HOME`, use its `skills/study-with-ai/` directory. If the directory already exists, compare its contents before updating.
+Place the repository contents in `~/.codex/skills/t-learn/`, with `SKILL.md` directly inside that directory. With a custom `CODEX_HOME`, use its `skills/t-learn/` directory. If the directory already exists, compare its contents before updating.
 
 In a session that can discover the skill, for example:
 
-> Use $study-with-ai to study these slides with me, starting at my current page. I'll describe my understanding; help me check it.
+> Use $t-learn to study these slides with me, starting at my current page. I'll describe my understanding; help me check it.
 
 Or begin with an idea:
 
-> Use $study-with-ai to examine this design with me. Let's run my version first, then compare why the course material does it differently.
+> Use $t-learn to examine this design with me. Let's run my version first, then compare why the course material does it differently.
 
 After learning:
 
-> Use $study-with-ai to review this learning session with me. Here is the raw-log path. Start with a few key observations, and let's discuss them together.
+> Use $t-learn to review this learning session with me. Here is the raw-log path. Start with a few key observations, and let's discuss them together.
 
 ## Extending the skill
 
