@@ -1,4 +1,4 @@
 interface:
   display_name: "Study with AI · 陪我理解"
-  short_description: "逐步陪学，检查自己的解释，比较设计方案，追问疑惑并接回学习主线"
-  default_prompt: "用 $study-with-ai 陪我从当前材料开始学习，检查我的想法，让我能追问到真正理解，并帮我记住深入问题后的来路。"
+  short_description: "先读一手材料，检查理解与设计，深入疑问后接回主线，结束时交接原始日志"
+  default_prompt: "用 $study-with-ai 陪我先读当前范围的一手材料，再检查我的想法、深入疑问并接回主线；本次学习结束后提供原始会话日志，等待交接复盘。"
