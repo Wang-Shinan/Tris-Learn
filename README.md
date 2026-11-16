@@ -1,55 +1,57 @@
-# Study with AI · 陪我理解
+# Study with AI
 
-一个以一手材料为基础，支持持续追问、检查自己的解释、比较设计方案，并配套原始日志交接与共同复盘的 AI 学习 skill。
+An AI learning skill grounded in primary material, sustained questions, examination of the learner's explanations, and comparison of designs, with raw-log handoff and a companion session-review workflow.
 
-学习复杂结构时，那些临时出现的问题，往往是把新知识接入自己解释体系的位置。本 skill 让 AI 跟住这些问题、检验学习者的想法，并在深入之后帮助接回主线。
+When studying a complex structure, spontaneous questions may connect new knowledge to an existing explanatory framework. This skill follows those questions, tests the learner's ideas, and helps return to the main thread.
 
-## 如何陪学
+## Studying together
 
-- 从学习者当前的页码、图或问题开始，按理解状态调整节奏。
-- 先忠实呈现当前讨论范围的一手材料，再讲解；明确区分原文、补充解释与纠错判断，不悄悄修正原文。
-- 检查学习者的类比与假设，具体说明哪些成立、哪里需要修改；复用学习者已经建立且仍然有效的类比。
-- 当学习者提出“如果让我设计”，用一个例子运行这个方案，再比较现成设计的约束与代价。
-- 解释无效时，重新定位对象、单位、时序或职责上的混淆。
-- 保留深入问题前的位置和未解疑问，降低同时思考与记路的负担。
-- 自然回应问题，不机械地每轮测验，也不凭一句“明白了”断言已经掌握。
-- 本次学习结束后，提供经核实的原始会话日志路径或导出文件，等待用户安排会话 review。无法取得原始记录时如实说明，不以总结代替。
+- Start at the learner's current page, figure, or question, adjusting the pace to their understanding.
+- Present primary material faithfully before explaining it. Translate by default when the material's language differs from the user's current language; otherwise present it directly. Distinguish source content, explanation, and correction without silently repairing the source.
+- Examine analogies and assumptions, identifying what holds and what needs revision. Reuse the learner's own analogies when they remain useful.
+- When the learner proposes a design, run an example through it and compare the existing design's constraints and tradeoffs.
+- When an explanation fails, locate confusion about objects, units, timing, or roles again.
+- Remember the starting point and unresolved questions during explorations, reducing the burden of thinking while tracking the route.
+- Respond naturally rather than quiz after every turn or infer mastery from “I understand” alone.
+- At the end, provide a verified raw-log path or export and wait for the user to arrange review. If the original record is unavailable, say so rather than substitute a summary.
 
-## 配套的共同复盘
+The instructions are in English to reduce instruction-token overhead. Conversation and translation follow the user's current language or explicit preference, not the language of the skill file.
 
-学习结束后先交接日志，用户决定何时开始 review。复盘是同一个 skill 的配套阶段，可以在原会话或新会话中进行，不会因提供日志而自动启动。
+## Reviewing together
 
-review 先读记录，再提出少量有证据的观察和一个值得讨论的问题；根据学习者的回应回看片段、修正判断，逐步形成共同认识。它关注理解如何变化、哪些互动有效、哪些疑问尚未解决，不先交付一份定论让学习者确认。需要时再讨论修改候选，不强求每次都产生改进规则。
+Hand off the log when learning ends; the user decides when to begin review. Review is a companion phase of the same skill, usable in the original or another chat. Providing a log does not automatically start it.
 
-## 文件
+Read the record, offer a few grounded observations and one useful question, then revisit excerpts and revise interpretations with the learner's responses. Examine changes in understanding, effective interactions, and unresolved questions without delivering a verdict for the learner to approve. Discuss changes when useful; a review need not produce new rules.
 
-- [SKILL.md](SKILL.md)：陪学原则、阶段入口与扩展规则。
-- [references/session-review.md](references/session-review.md)：用户请求学习会话 review 时才读取的共同复盘流程。
-- [notes/learning-cases.md](notes/learning-cases.md)：供维护者回顾形成过程的五个学习案例，不是执行陪学时的默认读取资料。
-- [agents/openai.yaml](agents/openai.yaml)：显示名称与默认调用提示。
+## Files
 
-`notes/` 保存维护素材，不从 `SKILL.md` 引导读取。当前仓库根目录仍是 skill 目录，改放 `notes/` 表示用途分离，不代表物理上移出了 skill。这个 skill 可用于逐步阅读教材、课件、论文及理解技术概念，不局限于案例中的计算机体系结构。
+- [SKILL.md](SKILL.md): study principles, phase routing, and extension guidance.
+- [references/session-review.md](references/session-review.md): the companion workflow, loaded when a learning-session review is requested.
+- [notes/learning-cases.md](notes/learning-cases.md): five original learning cases for maintainers to revisit the skill's development; not default execution context.
+- [agents/openai.yaml](agents/openai.yaml): display metadata and the default invocation prompt.
 
-## 在 Codex 中使用
+`notes/` holds maintenance material and is not linked for reading from `SKILL.md`. The repository root remains the skill directory: placing cases in `notes/` separates their purpose, not their physical location outside the skill. The original Chinese case notes are preserved. The skill applies to textbooks, slides, papers, and technical concepts beyond the computer-architecture examples in those notes.
 
-将仓库内容放入 `~/.codex/skills/study-with-ai/`，使 `SKILL.md` 位于该目录的第一层。若配置了自定义 `CODEX_HOME`，使用对应的 `skills/study-with-ai/` 目录。已有同名目录时，先比较内容再决定如何更新。
+## Using it in Codex
 
-在能够发现该 skill 的会话中，例如这样调用：
+Place the repository contents in `~/.codex/skills/study-with-ai/`, with `SKILL.md` directly inside that directory. With a custom `CODEX_HOME`, use its `skills/study-with-ai/` directory. If the directory already exists, compare its contents before updating.
 
-> 用 $study-with-ai 陪我学习这份课件，从我现在看到的这一页开始。我会说自己的理解，你帮我检查。
+In a session that can discover the skill, for example:
 
-也可以从一个具体想法开始：
+> Use $study-with-ai to study these slides with me, starting at my current page. I'll describe my understanding; help me check it.
 
-> 用 $study-with-ai 帮我检查这个设计。我想先按自己的方案走一遍，再比较课件为什么这样做。
+Or begin with an idea:
 
-学习后可以这样开始复盘：
+> Use $study-with-ai to examine this design with me. Let's run my version first, then compare why the course material does it differently.
 
-> 用 $study-with-ai 陪我复盘这次学习。这是原始会话日志的路径；先给几个关键观察，我们一起讨论。
+After learning:
 
-## 如何扩展
+> Use $study-with-ai to review this learning session with me. Here is the raw-log path. Start with a few key observations, and let's discuss them together.
 
-从真实的学习片段出发，记录当时的理解、没有奏效的解释、带来转折的例子，以及变化的证据和适用边界。
+## Extending the skill
 
-优先修正已有条目；跨案例成立的原则进入 `SKILL.md`，形成过程、个人案例和用户要求保留的待验证观察放入 `notes/`，不自动成为执行规则。只有实际误用表明需要校准时，再考虑补充最小的对比例子。
+Start with actual learning excerpts: the earlier understanding, an ineffective explanation, the example that changed the discussion, evidence of change, and scope.
 
-学习结束的日志交接与 skill 修订分开：原始日志保留在本地或平台支持的导出位置，不自动提交到本仓库，也不自动发送给其他会话。由用户安排后续 review，再决定是否修订 skill。
+Prefer revising existing guidance. Principles supported across cases belong in `SKILL.md`; their history, personal cases, and requested unvalidated observations belong in `notes/` without automatically becoming execution rules. Add a minimal contrasting example only when actual misuse shows a need for calibration.
+
+Keep log handoff separate from skill revision. Raw records stay locally or in supported export locations; they are not automatically committed here or sent to another chat. The user arranges review and then decides whether to revise the skill.

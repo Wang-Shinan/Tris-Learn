@@ -1,4 +1,4 @@
 interface:
-  display_name: "Study with AI · 陪我理解"
-  short_description: "从一手材料出发陪学，检查理解与设计，交接原始日志，并与学习者共同复盘"
-  default_prompt: "用 $study-with-ai 陪我先读当前范围的一手材料，再检查我的想法、深入疑问并接回主线；本次学习结束后提供原始会话日志，等待交接复盘。"
+  display_name: "Study with AI"
+  short_description: "Study primary material and review learning together"
+  default_prompt: "Use $study-with-ai to study the current material with me in my language, translating the source when needed. Check my ideas, explore questions, and reconnect to the main thread; hand off the raw log when we finish and wait for a review request."
